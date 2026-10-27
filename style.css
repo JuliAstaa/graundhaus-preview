@@ -639,3 +639,7 @@ html:not(.js) .site-view[hidden] { display: block !important; }
   .gh-compare tbody td { padding: var(--space-1) var(--space-2); }
   .gh-compare .gh-check { width: 23px; height: 20px; }
 }
+
+/* ---------- Calculator: same label-to-control gap on every field ---------- */
+/* A <legend> sits outside its fieldset's grid, so the fieldset gap never reaches it; space the control instead. */
+.gh-field legend + * { margin-top: var(--space-2); }
