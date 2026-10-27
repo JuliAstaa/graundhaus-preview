@@ -605,7 +605,8 @@ html:not(.js) .site-view[hidden] { display: block !important; }
 /* The three plans become three equal columns; each scope label sits on its own line above its ticks.
    The table keeps explicit ARIA roles in index.html, so the grid layout does not drop table semantics. */
 @media (max-width: 700px) {
-  .gh-table-scroll { overflow: visible; }
+  /* Only the comparison table; the Insight chart keeps scrolling inside its own box. */
+  .site-compare-scroll { overflow: visible; }
   .gh-compare, .gh-compare thead, .gh-compare tbody { display: block; min-width: 0; }
   .gh-compare tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .gh-compare thead th:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; padding: 0; border: 0; }
