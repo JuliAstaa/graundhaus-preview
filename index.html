@@ -148,6 +148,11 @@
           <figcaption class="gh-item-title site-chart-title" id="insight-chart-title" data-i18n="insight.caption">BALI OCCUPANCY TREND 2025</figcaption>
           <div class="gh-table-scroll site-chart-scroll" role="region" aria-labelledby="insight-chart-title" tabindex="0">
             <svg viewBox="0 0 720 340" role="img" aria-label="Bali occupancy 2025: lowest 46.61% in March, highest 69.54% in August" data-i18n-attr="aria-label:insight.chart.label">
+              <!-- Occupancy scale: labels only; the grid lines and season bands were removed at the client's request. -->
+              <text class="tick" x="36" y="314.0" text-anchor="end">40%</text>
+              <text class="tick" x="36" y="232.3" text-anchor="end">50%</text>
+              <text class="tick" x="36" y="150.6" text-anchor="end">60%</text>
+              <text class="tick" x="36" y="68.9" text-anchor="end">70%</text>
               <polyline class="line" points="71.5,144.3 126.5,215.0 181.5,256.0 236.5,169.2 291.5,162.1 346.5,108.5 401.5,83.2 456.5,68.6 511.5,79.8 566.5,109.2 621.5,163.2 676.5,139.4"/>
               <circle class="dot" cx="71.5" cy="144.3" r="3.5"/><text class="val" x="71.5" y="132.3" text-anchor="middle">60.28%</text><text class="tick" x="71.5" y="332" text-anchor="middle" data-i18n="month.jan">Jan</text>
               <circle class="dot" cx="126.5" cy="215.0" r="3.5"/><text class="val" x="126.5" y="233.0" text-anchor="middle">51.62%</text><text class="tick" x="126.5" y="332" text-anchor="middle" data-i18n="month.feb">Feb</text>
@@ -203,12 +208,12 @@
     </div>
   </section>
 
-  <!-- RevenueCalculator [deck p14]; eyebrow and title from client feedback ("Your Villa Revenue Calculator Is Here!", "Count Yours!"). Defaults reproduce the deck: payout 28.800.000, fee 2.880.000, owner income 25.920.000. -->
+  <!-- RevenueCalculator [deck p14]; eyebrow and title from client feedback ("COUNT YOURS ON OUR" / "Villa Revenue Calculator"). Defaults reproduce the deck: payout 28.800.000, fee 2.880.000, owner income 25.920.000. -->
   <section class="gh-band" id="calculator" aria-labelledby="calculator-title">
     <div class="gh-wrap site-stack" data-reveal>
       <div class="site-calc-head">
-        <p class="gh-eyebrow" data-i18n="calc.eyebrow">Your Villa Revenue Calculator Is Here!</p>
-        <h2 class="gh-display gh-display--xl" id="calculator-title" data-i18n="calc.title">Count Yours!</h2>
+        <p class="gh-eyebrow" data-i18n="calc.eyebrow">COUNT YOURS ON OUR</p>
+        <h2 class="gh-display gh-display--xl" id="calculator-title" data-i18n="calc.title">Villa Revenue Calculator</h2>
       </div>
       <form class="gh-calc" id="calc-form" action="#calculator" novalidate>
         <div class="gh-calc__inputs">
