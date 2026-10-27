@@ -594,3 +594,47 @@ html:not(.js) .site-view[hidden] { display: block !important; }
 /* Same marker the bundle uses for aria-current="page": a 1px ink rule under the link. */
 .gh-nav a[aria-current="location"] { border-bottom-color: var(--ink); }
 .site-menu__links a[aria-current="location"] { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+
+/* ---------- Calculator fields: focus ring on the whole IDR row ---------- */
+/* The bundle rings the inner input, which sits inside the row and shifts past the IDR prefix. */
+.gh-input-row .gh-input:focus-visible { outline: none; }
+.gh-input-row:focus-within { outline: var(--stroke-focus) solid var(--ink); outline-offset: 3px; }
+.gh-input-row:has(.gh-input[aria-invalid="true"]):focus-within { outline-color: var(--alert); }
+
+/* ---------- Inclusion Comparison on phones (client request): fits the screen, no sideways scroll ---------- */
+/* The three plans become three equal columns; each scope label sits on its own line above its ticks.
+   The table keeps explicit ARIA roles in index.html, so the grid layout does not drop table semantics. */
+@media (max-width: 700px) {
+  .gh-table-scroll { overflow: visible; }
+  .gh-compare, .gh-compare thead, .gh-compare tbody { display: block; min-width: 0; }
+  .gh-compare tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gh-compare thead th:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; padding: 0; border: 0; }
+  .gh-compare thead th { font-size: 12px; line-height: 15px; letter-spacing: .02em; padding: 0 var(--space-2) var(--space-4); }
+  .gh-compare .gh-rate { font-size: 32px; }
+  .gh-compare tbody th { grid-column: 1 / -1; padding: var(--space-4) 0 var(--space-2); font-size: 13px; line-height: 17px; border-left: 0; }
+  .gh-compare tbody td { padding: var(--space-2) var(--space-2) var(--space-3); }
+  /* The first plan column is now the leftmost one: no rule before it. */
+  .gh-compare tr > :nth-child(2) { border-left: 0; }
+}
+
+/* ---------- Host badge on phones (client request): full width ---------- */
+@media (max-width: 560px) {
+  .site-ota-intro { justify-items: stretch; }
+  .gh-host { grid-template-columns: 1fr; }
+}
+
+/* Inclusion Comparison on phones, client round 2:
+   - plan names share one row and centre in it, rates share the next row, so 10% lines up with 15%
+     however many lines each name wraps to (subgrid; without it, a two-line minimum keeps them level);
+   - scope rows about a third shorter. */
+@media (max-width: 700px) {
+  .gh-compare thead tr { grid-template-rows: auto auto; }
+  .gh-compare thead th:not(:first-child) { grid-row: span 2; display: grid; grid-template-rows: minmax(30px, auto) auto; align-items: center; justify-items: center; }
+  @supports (grid-template-rows: subgrid) {
+    .gh-compare thead th:not(:first-child) { grid-template-rows: subgrid; }
+  }
+  .gh-compare thead .gh-rate { align-self: start; }
+  .gh-compare tbody th { padding: var(--space-2) 0 var(--space-1); }
+  .gh-compare tbody td { padding: var(--space-1) var(--space-2); }
+  .gh-compare .gh-check { width: 23px; height: 20px; }
+}

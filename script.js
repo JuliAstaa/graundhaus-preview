@@ -432,21 +432,42 @@ function initCalc() {
   calcForm.addEventListener('input', renderCalc);
   calcForm.addEventListener('change', renderCalc);
 
-  // Digits only while typing; id-ID grouping (1.500.000) once the field is left.
+  // Digits only. Money fields keep id-ID grouping (1.500.000) while typing, with the caret
+  // kept after the same digit; villa unit stays plain digits.
   ['units', 'rate', 'costs'].forEach((name) => {
     const field = calcForm.elements[name];
     const grouped = name !== 'units';
-    field.addEventListener('focus', () => { field.value = field.value.replace(/\D/g, ''); });
+
     field.addEventListener('input', () => {
-      const clean = field.value.replace(/\D/g, '');
-      if (clean !== field.value) field.value = clean;
+      const caret = field.selectionStart ?? field.value.length;
+      const digitsBefore = field.value.slice(0, caret).replace(/\D/g, '').length;
+      const next = groupDigits(field.value, grouped);
+      if (next === field.value) return;
+      field.value = next;
+      let pos = 0;
+      for (let seen = 0; pos < next.length && seen < digitsBefore; pos++) {
+        if (/\d/.test(next[pos])) seen++;
+      }
+      field.setSelectionRange(pos, pos);
     });
-    field.addEventListener('blur', () => {
-      const clean = field.value.replace(/\D/g, '');
-      field.value = clean && grouped ? idr.format(Number(clean)) : clean;
+
+    if (!grouped) return;
+    // Backspace or Delete next to a dot removes the digit beyond it, not the dot alone.
+    field.addEventListener('keydown', (e) => {
+      const { selectionStart: start, selectionEnd: end, value } = field;
+      if (start !== end) return;
+      if (e.key === 'Backspace' && value[start - 1] === '.') field.setSelectionRange(start - 1, start - 1);
+      if (e.key === 'Delete' && value[start] === '.') field.setSelectionRange(start + 1, start + 1);
     });
   });
   renderCalc();
+}
+
+// "0012500" -> "12.500". BigInt keeps long numbers exact.
+function groupDigits(value, grouped) {
+  const digits = value.replace(/\D/g, '').replace(/^0+(?=\d)/, '');
+  if (!digits || !grouped) return digits;
+  return idr.format(BigInt(digits));
 }
 
 /* ---------- Copy email and phone ---------- */
