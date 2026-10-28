@@ -317,92 +317,57 @@
     </div>
   </section>
 
-  <!-- ServicePills + HostBadge [deck p9] -->
-  <section class="gh-band" aria-labelledby="ota-title">
+  <!-- WhyUs "Why Us?" [profile p7; client feedback 28 Oct 2026, docs/revisions/2026-10-28-villa-management.md]. Each label (dt) comes before its figure (dd) so the dl is valid; .gh-why's order puts the figure on top. -->
+  <section class="gh-band" id="why-us" aria-labelledby="why-us-title">
     <div class="gh-wrap site-stack" data-reveal>
-      <div class="site-pills-head">
-        <div class="site-ota-intro">
-          <h2 class="gh-display gh-display--xl" id="ota-title">01 - OTA Management</h2>
-          <div class="gh-host">
-            <div class="gh-host__id"><span class="gh-host__avatar"><img src="assets/logo/groundhaus-mark-ink.svg" alt="" width="56" height="56"></span><p class="gh-host__name">Groundhaus.co</p><p class="gh-host__tag">Superhost</p></div>
-            <dl class="gh-host__stats">
-              <div><dt data-i18n="host.reviews">Reviews</dt><dd>420</dd></div>
-              <div><dt data-i18n="host.rating">Rating</dt><dd>5.0</dd></div>
-              <div><dt data-i18n="host.years">Years hosting</dt><dd>2</dd></div>
-            </dl>
-          </div>
-        </div>
-        <p class="gh-script">Positioned to be seen, optimized to convert.</p>
-      </div>
-      <div class="gh-pills">
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">PLATFORM STRATEGY</h3><p class="gh-caps gh-caps--s" data-i18n="ota.platform">PROFESSIONAL SETUP &amp; MANAGEMENT ACROSS BOOKING.COM, AIRBNB, AND LEADING REGIONAL OTAS.</p></div>
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">LISTING OPTIMIZATION</h3><p class="gh-caps gh-caps--s" data-i18n="ota.listing">ENHANCING LISTING QUALITY SCORE, RANK ALGORITHMS, AND CONTENT POSITIONING TO GAIN MAXIMUM PLATFORM VISIBILITY.</p></div>
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">OPERATIONS &amp; SUPPORT</h3><p class="gh-caps gh-caps--s" data-i18n="ota.support">SEAMLESS RESERVATION MANAGEMENT, RATE AVAILABILITY SYNC, AND 24/7 RESPONSIVE GUEST COMMUNICATION.</p></div>
-      </div>
+      <h2 class="gh-display gh-display--xl site-center" id="why-us-title" data-i18n="why.title">Why Us?</h2>
+      <dl class="gh-why">
+        <div><dt data-i18n="why.villas">Villas in Our Management Portfolio</dt><dd>&gt; 50</dd></div>
+        <div><dt data-i18n="why.areas">Areas accross bali</dt><dd>8</dd></div>
+        <div><dt data-i18n="why.occupancy">Average occupancy accross the portofolio</dt><dd>avg. 72%</dd></div>
+        <div><dt data-i18n="why.revenue"><strong>More revenue per available night</strong> vs. owner-managed villas</dt><dd>+ 21%</dd></div>
+        <div><dt data-i18n="why.points">Our portfolio: 72% vs. Owner-managed villas: 66%</dt><dd>+ 6 p.p</dd></div>
+        <div><dt data-i18n="why.upcoming">Upcoming Villas to Be Managed on November 2026</dt><dd>&gt; 15</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- ServicePills on mist [deck p10] -->
-  <section class="gh-band gh-band--mist" aria-labelledby="pricing-title">
-    <div class="gh-wrap site-pricing" data-reveal>
-      <h2 class="gh-display gh-display--xl" id="pricing-title">02. Revenue &amp; Pricing Strategy</h2>
-      <p class="gh-script">Priced to compete, optimized to perform.</p>
-      <div class="gh-pills">
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">DYNAMIC PRICING</h3><p class="gh-caps gh-caps--s" data-i18n="pricing.dynamic">ALGORITHMIC AND MARKET-DRIVEN DYNAMIC PRICING UPDATES BASED ON SEASONALITY, DEMAND, AND LOCAL EVENT SPIKES.</p></div>
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">RATE PARITY CONTROL</h3><p class="gh-caps gh-caps--s" data-i18n="pricing.parity">MANAGING RATE STRUCTURES ACROSS ALL CHANNELS TO PREVENT PRICE DISPARITIES AND PROTECT BRAND VALUE.</p></div>
-        <div class="gh-pill"><h3 class="gh-item-title gh-pill__title">COMPETITOR ANALYSIS</h3><p class="gh-caps gh-caps--s" data-i18n="pricing.competitor">CONTINUOUS MONITORING OF COMPETITOR RATES, OCCUPANCY TRENDS, AND CUSTOM PROMOTION &amp; DISCOUNT STRATEGIES.</p></div>
+  <!-- ServiceFrame [profile p9; client feedback 28 Oct 2026]. Pill names are service names and stay English. The frame has no visible title, so a hidden h2 keeps the heading order. -->
+  <section class="gh-band" id="villa-services" aria-labelledby="villa-services-title">
+    <div class="gh-wrap" data-reveal>
+      <h2 class="site-sr-only" id="villa-services-title" data-i18n="nav.services">Services</h2>
+      <div class="gh-frame">
+        <ul class="gh-frame__grid">
+          <li><h3 class="gh-frame__pill">PLATFORM STRATEGY</h3><p class="gh-frame__desc" data-i18n="frame.platform">PROFESSIONAL SETUP &amp; MANAGEMENT ACROSS BOOKING.COM, <strong>SUPERHOST</strong> AIRBNB AND LEADING REGIONAL OTAS.</p></li>
+          <li><h3 class="gh-frame__pill">LISTING OPTIMIZATION</h3><p class="gh-frame__desc" data-i18n="frame.listing">ENHANCING LISTING QUALITY SCORE, RANK ALGORITHMS AND <strong>CONTENT POSITIONING</strong> TO GAIN MAXIMUM PLATFORM VISIBILITY.</p></li>
+          <li><h3 class="gh-frame__pill">OPERATIONS &amp; SUPPORT</h3><p class="gh-frame__desc" data-i18n="frame.support">SEAMLESS RESERVATION MANAGEMENT, RATE AVAILABILITY SYNC AND <strong>24/7 RESPONSIVE GUEST COMMUNICATION.</strong></p></li>
+          <li><h3 class="gh-frame__pill">DYNAMIC PRICING</h3><p class="gh-frame__desc" data-i18n="frame.dynamic">ALGORITHMIC AND MARKET-DRIVEN DYNAMIC PRICING UPDATES BASED ON SEASONALITY, DEMAND AND LOCAL EVENT SPIKES.</p></li>
+          <li><h3 class="gh-frame__pill">RATE PARITY CONTROL</h3><p class="gh-frame__desc" data-i18n="frame.parity">MANAGING RATE STRUCTURES ACROSS ALL CHANNELS TO PREVENT PRICE DISPARITIES AND PROTECT BRAND VALUE.</p></li>
+          <li><h3 class="gh-frame__pill">COMPETITOR ANALYSIS</h3><p class="gh-frame__desc" data-i18n="frame.competitor">CONTINUOUS MONITORING OF COMPETITOR RATES, OCCUPANCY TRENDS AND CUSTOM PROMOTION &amp; DISCOUNT STRATEGIES.</p></li>
+        </ul>
+        <p class="gh-frame__pill gh-frame__base">PROPERTY CONTROL &amp; QC</p>
       </div>
     </div>
   </section>
 
-  <!-- Property operations six-item grid [deck p11] -->
-  <section class="gh-band" aria-labelledby="operations-title">
-    <div class="gh-wrap site-stack" data-reveal>
-      <div class="site-pills-head">
-        <h2 class="gh-display gh-display--xl site-ops-title" id="operations-title">03 - Property Operations &amp; Quality Control</h2>
-        <p class="gh-script">Built to run smoothly, managed to stay consistent.</p>
-      </div>
-      <ul class="site-ops">
-        <li><h3 class="gh-item-title">SOP &amp; SERVICE STANDARDS</h3><p class="gh-caps gh-caps--s" data-i18n="ops.sop">HOUSEKEEPING, MAINTENANCE, RESERVATION, CHECK-IN/OUT, GUEST HANDLING, AND ESCALATION WORKFLOWS.</p></li>
-        <li><h3 class="gh-item-title">HOUSE KEEPING QUALITY CONTROL</h3><p class="gh-caps gh-caps--s" data-i18n="ops.housekeeping">CLEANING CHECKLISTS, ROOM READINESS, LINEN, AMENITIES, INSPECTIONS, AND CORRECTIVE FOLLOW UP.</p></li>
-        <li><h3 class="gh-item-title">PREVENTIVE MAINTENANCE</h3><p class="gh-caps gh-caps--s" data-i18n="ops.maintenance">SCHEDULED PROPERTY CHECKS, MAINTENANCE LOGS, REPAIR PRIORITIZATION, AND VENDOR COORDINATION.</p></li>
-        <li><h3 class="gh-item-title">EXPENSE &amp; VENDOR CONTROL</h3><p class="gh-caps gh-caps--s" data-i18n="ops.expense">LAUNDRY, AMENITIES, SUPPLIES, REPAIRS, APPROVALS, AND RECURRING OPERATIONAL NEEDS.</p></li>
-        <li><h3 class="gh-item-title">RESERVATION &amp; GUEST JOURNEY</h3><p class="gh-caps gh-caps--s" data-i18n="ops.journey">PRE-ARRIVAL, ARRIVAL, IN-STAY, DEPARTURE, AND ISSUE-RESPONSE STANDARDS.</p></li>
-        <li><h3 class="gh-item-title">REPORTING &amp; IMPROVEMENT</h3><p class="gh-caps gh-caps--s" data-i18n="ops.reporting">OPERATIONAL REPORTING, RECURRING ISSUE TRACKING, OWNER VISIBILITY, AND SOP REFINEMENT.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- IndexList on harbor "Management Solution" [deck p12] -->
-  <section class="gh-band gh-band--harbor" aria-labelledby="management-title">
-    <div class="gh-wrap gh-split" data-reveal>
-      <h2 class="gh-display gh-display--l" id="management-title" data-i18n="management.title">Management Solution</h2>
-      <ol class="gh-index">
-        <li><h3 class="gh-item-title">FULL MANAGEMENT SERVICE</h3><span class="gh-index-no">\01</span><p class="gh-caps gh-caps--s" data-i18n="management.full">OTA SALES AND LISTING MANAGEMENT, DEDICATED PROPERTY OPERATIONS, HOUSEKEEPING, MAINTENANCE, LAUNDRY, AMENITIES, REPAIR COORDINATION, RESERVATION STANDARDS AND OPERATIONAL CONTROLS.</p></li>
-        <li><h3 class="gh-item-title">ROOM SALES ONLY</h3><span class="gh-index-no">\02</span><p class="gh-caps gh-caps--s" data-i18n="management.rooms">OTA-FOCUSED COMMERCIAL MANAGEMENT INCLUDING LISTINGS, CHANNEL MONITORING, INVENTORY, PRICING, AND RESERVATION SUPPORT. PROPERTY OPERATIONS REMAIN WITH THE OWNER.</p></li>
-        <li><h3 class="gh-item-title">PROPERTY OPERATIONS &amp; QC</h3><span class="gh-index-no">\03</span><p class="gh-caps gh-caps--s" data-i18n="management.qc">FLEXIBLE STAFFING SUPPORT FOR HOUSEKEEPING, CLEANING, VILLA ATTENDANTS, AND OTHER PROPERTY ROLES - AVAILABLE BASED ON OPERATIONAL NEEDS.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ComparisonTable "Inclusion Comparison" [deck p13] -->
-  <section class="gh-band" aria-labelledby="comparison-title">
+  <!-- ComparisonTable "Inclusion Comparison" [profile p11; client preview 28 Oct 2026]. Line breaks follow the profile; empty cells are blank, as on p11, with "Not included" for screen readers. -->
+  <section class="gh-band" id="comparison" aria-labelledby="comparison-title">
     <div class="gh-wrap site-stack" data-reveal>
       <h2 class="gh-display gh-display--xl site-center" id="comparison-title" data-i18n="comparison.title">Inclusion Comparison</h2>
       <div class="gh-table-scroll site-compare-scroll" role="region" aria-labelledby="comparison-title" tabindex="0">
         <table class="gh-compare" role="table" aria-labelledby="comparison-title">
           <thead role="rowgroup">
-            <tr role="row"><th scope="col" role="columnheader">SCOPE</th><th scope="col" role="columnheader">FULL MANAGEMENT<span class="gh-rate">15%</span></th><th scope="col" role="columnheader">ROOM SALES ONLY<span class="gh-rate">10%</span></th><th scope="col" role="columnheader">PROPERTY OPERATION &amp; QC</th></tr>
+            <tr role="row"><th scope="col" role="columnheader">SCOPE</th><th scope="col" role="columnheader">FULL MANAGEMENT <span class="gh-rate">15%</span></th><th scope="col" role="columnheader">ROOM SALES ONLY <span class="gh-rate">10%</span></th><th scope="col" role="columnheader">PROPERTY OPERATION &amp; <br>QC</th></tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row"><th scope="row" role="rowheader">OTA MANAGEMENT</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">LISTING OPTIMIZATION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">DYNAMIC PRICING &amp; RATE CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">RESERVATION REPORT</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">HOUSEKEEPING &amp; CLEAN CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">MAINTENANCE COORDINATION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">LAUNDRY, AMENITIES &amp; REPAIR EXPENSE CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
-            <tr role="row"><th scope="row" role="rowheader">OPERATIONAL SOP &amp; INSPECTION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="gh-muted" aria-hidden="true">&mdash;</span><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">OTA MANAGEMENT</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">LISTING OPTIMIZATION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">DYNAMIC PRICING &amp; <br>RATE CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">RESERVATION REPORT</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">HOUSEKEEPING &amp; CLEAN <br>CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">MAINTENANCE <br>COORDINATION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">LAUNDRY, AMENITIES &amp; <br>REPAIR EXPENSE CONTROL</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+            <tr role="row"><th scope="row" role="rowheader">OPERATIONAL SOP &amp; <br>INSPECTION</th><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td role="cell"><span class="site-sr-only" data-i18n="comparison.excluded">Not included</span></td><td role="cell"><svg class="gh-check" viewBox="0 0 28 24" role="img" aria-label="Included" data-i18n-attr="aria-label:comparison.included"><path d="M2.5 12.5 9.5 20 25.5 3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
           </tbody>
         </table>
       </div>

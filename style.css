@@ -300,6 +300,35 @@
 }
 @media (prefers-reduced-motion: reduce) { .gh-svc__arrow { transition: none; } }
 
+/* ---------- Why us (six figures) ---------- */
+.gh-why { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-7) var(--space-6); margin: 0; }
+.gh-why div { display: flex; flex-direction: column; gap: var(--space-2); }
+.gh-why div:nth-child(3n+2) { align-items: center; text-align: center; }
+.gh-why div:nth-child(3n) { align-items: flex-end; text-align: right; }
+.gh-why dd { margin: 0; order: 0; font: 700 clamp(36px, 4.4vw, 52px)/1 var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.gh-why dt { order: 1; font-size: 16px; line-height: 21px; max-width: 260px; }
+.gh-why dt strong { font-weight: 700; }
+@media (max-width: 760px) {
+  .gh-why { grid-template-columns: 1fr 1fr; }
+  .gh-why div:nth-child(n) { align-items: flex-start; text-align: left; }
+}
+
+/* ---------- Service frame (six pills joined by one outline) ---------- */
+.gh-frame { --pill-h: 64px; position: relative; margin-block: calc(var(--pill-h) / 2); border: var(--stroke-focus) solid var(--ink); border-radius: 36px; padding: 0 var(--space-5) 0; color: var(--ink); }
+.gh-frame__grid { list-style: none; margin: calc(var(--pill-h) / -2) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-7) var(--space-6); position: relative; }
+.gh-frame__grid li { display: grid; gap: var(--space-4); justify-items: center; text-align: center; position: relative; }
+.gh-frame__grid li:not(:nth-child(3n))::after { content: ""; position: absolute; top: calc(var(--pill-h) / 2 - 1px); left: 100%; width: var(--space-6); height: var(--stroke-focus); background: var(--ink); }
+.gh-frame__pill { display: grid; place-items: center; box-sizing: border-box; width: 100%; min-height: var(--pill-h); margin: 0; padding: 8px var(--space-5); border: 3px solid var(--ink); border-radius: var(--radius-pill); background: var(--paper); font: 700 18px/22px var(--font-sans); letter-spacing: .01em; text-transform: uppercase; position: relative; z-index: 1; }
+.gh-frame__desc { margin: 0; max-width: 300px; font-size: 13px; line-height: 17px; letter-spacing: .02em; text-transform: uppercase; }
+.gh-frame__desc strong { font-weight: 700; }
+.gh-frame__base { width: min(320px, 100%); margin: var(--space-7) auto calc(var(--pill-h) / -2); }
+@media (max-width: 860px) {
+  .gh-frame { border: 0; margin: 0; padding: 0; }
+  .gh-frame__grid { margin: 0; grid-template-columns: 1fr; gap: var(--space-6); }
+  .gh-frame__grid li::after { display: none; }
+  .gh-frame__base { width: 100%; margin: var(--space-6) 0 0; }
+}
+
 /* ---------- Insight chart (line on paper) ---------- */
 .gh-insight { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-7); align-items: center; }
 .gh-chart { display: grid; gap: var(--space-4); margin: 0; }
@@ -456,30 +485,9 @@ html:not(.js) .site-view[hidden] { display: block !important; }
 /* Visible marker for copy still to come from the client. */
 .site-todo { outline: var(--stroke-hairline) dashed currentColor; outline-offset: 4px; text-transform: none; }
 
-/* ---------- Service pills (deck p9, p10) ---------- */
-/* Pills in one row stretch to the tallest; keep each pill at its own height. */
-.gh-pill { align-content: start; }
+/* ---------- Heading with a script line beside it (The Details, deck p28) ---------- */
 .site-pills-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: var(--space-6); }
 .site-pills-head > .gh-script { max-width: 420px; text-align: center; }
-.site-ota-intro { display: grid; gap: var(--space-6); justify-items: start; }
-.site-pricing { display: flex; flex-direction: column; gap: var(--space-7); }
-.site-pricing > .gh-script { order: 1; max-width: 420px; text-align: center; }
-.site-pricing > .gh-pills { order: 2; }
-.site-pricing > h2 { order: 3; align-self: flex-end; max-width: 640px; }
-/* Cream on mist is 4.46:1, under AA for small text; paper-white reaches 4.8:1. */
-.gh-band--mist .gh-pill .gh-caps { color: var(--paper-white); }
-@media (max-width: 860px) { .site-pricing > h2 { align-self: flex-start; } }
-
-/* ---------- Property operations grid (deck p11) ---------- */
-.site-ops-title { max-width: 760px; }
-.site-ops { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--space-7); }
-.site-ops li { display: grid; gap: var(--space-4); align-content: start; padding-block: var(--space-6); }
-.site-ops li:nth-child(-n+3) { border-bottom: var(--stroke-hairline) solid currentColor; }
-@media (max-width: 860px) {
-  .site-ops { grid-template-columns: 1fr; }
-  .site-ops li:nth-child(n) { border-bottom: var(--stroke-hairline) solid currentColor; }
-  .site-ops li:last-child { border-bottom: 0; }
-}
 
 /* ---------- Project detail (deck p16 to p19) ---------- */
 .site-project .gh-split { align-items: start; }
@@ -601,6 +609,15 @@ html:not(.js) .site-view[hidden] { display: block !important; }
 .gh-input-row:focus-within { outline: var(--stroke-focus) solid var(--ink); outline-offset: 3px; }
 .gh-input-row:has(.gh-input[aria-invalid="true"]):focus-within { outline-color: var(--alert); }
 
+/* ---------- Inclusion Comparison as on profile p11 (client preview, 28 Oct 2026) ---------- */
+/* The rate sits on the plan's line in the header type, the four columns share the width evenly,
+   and the plan names centre against the two-line QC head. Under 1000px an even column is too narrow
+   for the longest scope line (REPAIR EXPENSE CONTROL, 199px), so the scope column keeps 200px plus its padding. */
+.gh-compare { table-layout: fixed; }
+@media (max-width: 999px) { .gh-compare thead th:first-child { width: 200px; } }
+.gh-compare thead th { vertical-align: middle; }
+.gh-compare .gh-rate { display: inline; margin: 0; font: inherit; }
+
 /* ---------- Inclusion Comparison on phones (client request): fits the screen, no sideways scroll ---------- */
 /* The three plans become three equal columns; each scope label sits on its own line above its ticks.
    The table keeps explicit ARIA roles in index.html, so the grid layout does not drop table semantics. */
@@ -611,17 +628,12 @@ html:not(.js) .site-view[hidden] { display: block !important; }
   .gh-compare tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .gh-compare thead th:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; padding: 0; border: 0; }
   .gh-compare thead th { font-size: 12px; line-height: 15px; letter-spacing: .02em; padding: 0 var(--space-2) var(--space-4); }
-  .gh-compare .gh-rate { font-size: 32px; }
   .gh-compare tbody th { grid-column: 1 / -1; padding: var(--space-4) 0 var(--space-2); font-size: 13px; line-height: 17px; border-left: 0; }
+  /* A scope label has the whole row here, so the profile's line breaks are not needed. */
+  .gh-compare tbody th br { display: none; }
   .gh-compare tbody td { padding: var(--space-2) var(--space-2) var(--space-3); }
   /* The first plan column is now the leftmost one: no rule before it. */
   .gh-compare tr > :nth-child(2) { border-left: 0; }
-}
-
-/* ---------- Host badge on phones (client request): full width ---------- */
-@media (max-width: 560px) {
-  .site-ota-intro { justify-items: stretch; }
-  .gh-host { grid-template-columns: 1fr; }
 }
 
 /* Inclusion Comparison on phones, client round 2:
